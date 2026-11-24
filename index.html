@@ -1,0 +1,1500 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>911爆料_官方视频资讯平台|聚合真实现场与深度追踪</title>
+<meta name="description" content="911爆料官方网站，聚合真实现场影像、事件追踪与深度解析，面向创作者与企业搭建高品质内容生态，提供官方发布、精品内容与社区互动。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e63946'/%3E%3Cpath d='M20 44 L32 16 L44 44 Z' fill='%23fff'/%3E%3Ccircle cx='32' cy='38' r='4' fill='%23e63946'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bx-ink:#0d0d0f;
+  --bx-paper:#f5f4f2;
+  --bx-red:#e63946;
+  --bx-red-deep:#b81f2c;
+  --bx-mid:#5a5a62;
+  --bx-line:#dcdad6;
+  --bx-card:#ffffff;
+  --bx-tint:#efeeea;
+  --bx-radius:14px;
+  --bx-shadow:0 10px 30px rgba(13,13,15,.08);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  color:var(--bx-ink);
+  background:var(--bx-paper);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{margin:0;line-height:1.3;}
+p{margin:0 0 1em;}
+.bx-wrap{width:min(1180px,92%);margin:0 auto;}
+.bx-anchor{scroll-margin-top:150px;}
+
+/* ============ 吸顶公告 + 页头 ============ */
+.bx-sticky-top{
+  position:sticky;
+  top:0;
+  z-index:120;
+  box-shadow:0 2px 14px rgba(0,0,0,.06);
+}
+.bx-announce{
+  background:var(--bx-ink);
+  color:#f2f1ee;
+  font-size:13px;
+  letter-spacing:.02em;
+}
+.bx-announce__inner{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:9px 0;
+  flex-wrap:wrap;
+}
+.bx-announce__tag{
+  background:var(--bx-red);
+  color:#fff;
+  padding:2px 9px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:11px;
+  letter-spacing:.08em;
+  flex:none;
+}
+.bx-announce__list{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+  color:#cfceca;
+}
+.bx-announce__list span{white-space:nowrap;}
+.bx-announce__list b{color:#fff;font-weight:600;}
+.bx-header{
+  background:rgba(245,244,242,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--bx-line);
+}
+.bx-header__inner{
+  display:flex;
+  align-items:center;
+  gap:26px;
+  padding:14px 0;
+}
+.bx-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:19px;
+  letter-spacing:.02em;
+  flex:none;
+}
+.bx-brand__mark{
+  width:34px;height:34px;
+  border-radius:9px;
+  background:var(--bx-red);
+  display:grid;place-items:center;
+  color:#fff;font-size:17px;font-weight:900;
+}
+.bx-brand__sub{font-size:11px;color:var(--bx-mid);font-weight:500;letter-spacing:.14em;display:block;line-height:1.2;}
+.bx-nav{
+  display:flex;
+  gap:20px;
+  font-size:14.5px;
+  margin-left:8px;
+  flex:1;
+  flex-wrap:wrap;
+}
+.bx-nav a{padding:4px 2px;border-bottom:2px solid transparent;transition:.2s;}
+.bx-nav a:hover{color:var(--bx-red);border-color:var(--bx-red);}
+.bx-search{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid var(--bx-line);
+  background:#fff;
+  border-radius:999px;
+  padding:6px 6px 6px 14px;
+  min-width:230px;
+  flex:none;
+}
+.bx-search input{
+  border:none;outline:none;font-size:13.5px;
+  background:transparent;width:100%;color:var(--bx-ink);
+}
+.bx-search button{
+  border:none;background:var(--bx-ink);color:#fff;
+  border-radius:999px;padding:5px 13px;font-size:12.5px;font-weight:600;
+}
+.bx-search__hint{
+  font-size:12px;color:var(--bx-red);margin-top:6px;display:none;
+}
+.bx-burger{
+  display:none;
+  border:1px solid var(--bx-line);
+  background:#fff;border-radius:10px;
+  width:40px;height:38px;align-items:center;justify-content:center;
+  flex-direction:column;gap:4px;
+}
+.bx-burger span{display:block;width:18px;height:2px;background:var(--bx-ink);}
+
+/* ============ 首屏 ============ */
+.bx-hero{padding:54px 0 40px;}
+.bx-hero__grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:42px;
+  align-items:center;
+}
+.bx-hero__kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:700;letter-spacing:.16em;
+  color:var(--bx-red-deep);
+  background:#fbe9ea;
+  border:1px solid #f3c6ca;
+  padding:5px 12px;border-radius:999px;
+  margin-bottom:18px;
+}
+.bx-hero h1{
+  font-size:clamp(34px,4.6vw,56px);
+  font-weight:900;
+  letter-spacing:-.01em;
+  margin-bottom:16px;
+}
+.bx-hero h1 em{font-style:normal;color:var(--bx-red);}
+.bx-hero__lead{
+  font-size:16.5px;
+  color:var(--bx-mid);
+  max-width:44ch;
+  margin-bottom:20px;
+}
+.bx-hero__desc{
+  font-size:14px;
+  color:#3d3d43;
+  max-width:52ch;
+  border-left:3px solid var(--bx-red);
+  padding-left:14px;
+  margin-bottom:24px;
+}
+.bx-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+.bx-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 22px;border-radius:999px;
+  font-size:14px;font-weight:700;
+  border:1px solid transparent;transition:.2s;
+}
+.bx-btn--primary{background:var(--bx-red);color:#fff;}
+.bx-btn--primary:hover{background:var(--bx-red-deep);transform:translateY(-1px);}
+.bx-btn--ghost{border-color:var(--bx-ink);color:var(--bx-ink);background:transparent;}
+.bx-btn--ghost:hover{background:var(--bx-ink);color:#fff;}
+.bx-btn--light{background:#fff;color:var(--bx-ink);border-color:var(--bx-line);}
+.bx-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;border-top:1px solid var(--bx-line);padding-top:22px;
+}
+.bx-stats__item strong{
+  display:block;font-size:26px;font-weight:900;letter-spacing:-.02em;
+}
+.bx-stats__item span{font-size:12.5px;color:var(--bx-mid);}
+.bx-hero__visual{
+  position:relative;border-radius:22px;overflow:hidden;
+  box-shadow:var(--bx-shadow);border:1px solid var(--bx-line);
+  background:#111;
+}
+.bx-hero__visual img{width:100%;aspect-ratio:4/3.4;object-fit:cover;}
+.bx-hero__badge{
+  position:absolute;left:16px;bottom:16px;
+  background:rgba(13,13,15,.82);
+  color:#fff;padding:8px 14px;border-radius:10px;
+  font-size:12.5px;backdrop-filter:blur(4px);
+  display:flex;align-items:center;gap:8px;
+}
+.bx-hero__badge i{width:7px;height:7px;border-radius:50%;background:var(--bx-red);display:inline-block;}
+.bx-hero__corner{
+  position:absolute;right:16px;top:16px;
+  background:var(--bx-red);color:#fff;font-size:11px;font-weight:800;
+  letter-spacing:.1em;padding:5px 10px;border-radius:6px;
+}
+
+/* ============ 通用 Section ============ */
+.bx-section{padding:46px 0;}
+.bx-section--tint{background:var(--bx-tint);}
+.bx-section--dark{background:var(--bx-ink);color:#f1f0ed;}
+.bx-sec-head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:20px;margin-bottom:28px;flex-wrap:wrap;
+}
+.bx-sec-head h2{
+  font-size:clamp(23px,2.6vw,32px);font-weight:900;letter-spacing:-.01em;
+}
+.bx-sec-head h2 small{
+  display:block;font-size:12px;font-weight:700;letter-spacing:.18em;
+  color:var(--bx-red);margin-bottom:8px;
+}
+.bx-sec-head p{font-size:13.5px;color:var(--bx-mid);max-width:48ch;margin:0;}
+.bx-section--dark .bx-sec-head p{color:#a9a8a4;}
+
+/* ============ 焦点内容 ============ */
+.bx-focus__grid{
+  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+  gap:26px;
+}
+.bx-focus__main{
+  background:var(--bx-card);border-radius:var(--bx-radius);
+  overflow:hidden;border:1px solid var(--bx-line);
+  box-shadow:var(--bx-shadow);transition:.25s;
+  display:flex;flex-direction:column;
+}
+.bx-focus__main:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(13,13,15,.12);}
+.bx-focus__main img{width:100%;aspect-ratio:16/9.2;object-fit:cover;}
+.bx-focus__body{padding:22px;}
+.bx-focus__body h3{font-size:21px;margin-bottom:10px;}
+.bx-focus__body p{font-size:14px;color:var(--bx-mid);}
+.bx-tagrow{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0;}
+.bx-tag{
+  font-size:11.5px;padding:3px 10px;border-radius:999px;
+  background:#f0eeea;color:#4a4a50;font-weight:600;
+}
+.bx-tag--red{background:#fbe4e6;color:var(--bx-red-deep);}
+.bx-focus__list{display:flex;flex-direction:column;gap:16px;}
+.bx-minicard{
+  background:var(--bx-card);border:1px solid var(--bx-line);
+  border-radius:var(--bx-radius);padding:18px 20px;
+  display:flex;gap:16px;align-items:flex-start;
+  transition:.22s;flex:1;
+}
+.bx-minicard:hover{border-color:var(--bx-red);transform:translateX(3px);}
+.bx-minicard__thumb{
+  width:74px;height:74px;border-radius:10px;overflow:hidden;flex:none;
+}
+.bx-minicard__thumb img{width:100%;height:100%;object-fit:cover;}
+.bx-minicard h3{font-size:15.5px;margin-bottom:6px;}
+.bx-minicard p{font-size:12.5px;color:var(--bx-mid);margin:0 0 8px;}
+.bx-meta{font-size:11.5px;color:#8a8a90;display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+
+/* ============ 视频流 ============ */
+.bx-video-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;
+}
+.bx-vcard{
+  background:var(--bx-card);border:1px solid var(--bx-line);
+  border-radius:var(--bx-radius);overflow:hidden;
+  display:flex;flex-direction:column;transition:.25s;min-width:0;
+}
+.bx-vcard:hover{box-shadow:0 16px 36px rgba(13,13,15,.1);transform:translateY(-2px);}
+.bx-vcard__cover{position:relative;overflow:hidden;}
+.bx-vcard__cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.4s;}
+.bx-vcard:hover .bx-vcard__cover img{transform:scale(1.04);}
+.bx-vcard__play{
+  position:absolute;inset:0;display:grid;place-items:center;
+  background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45));
+  opacity:.92;
+}
+.bx-vcard__play span{
+  width:46px;height:46px;border-radius:50%;
+  background:rgba(255,255,255,.92);
+  display:grid;place-items:center;color:var(--bx-ink);font-size:15px;
+}
+.bx-vcard__dur{
+  position:absolute;right:10px;bottom:10px;background:rgba(13,13,15,.8);
+  color:#fff;font-size:11px;padding:2px 8px;border-radius:5px;
+}
+.bx-vcard__body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1;}
+.bx-vcard__body h3{font-size:17px;margin-bottom:8px;}
+.bx-vcard__body p{font-size:13px;color:var(--bx-mid);flex:1;}
+.bx-vcard__foot{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:10px;margin-top:14px;padding-top:13px;border-top:1px dashed var(--bx-line);
+  flex-wrap:wrap;
+}
+.bx-actions{display:flex;gap:8px;}
+.bx-actbtn{
+  border:1px solid var(--bx-line);background:#fff;border-radius:999px;
+  font-size:12px;padding:4px 11px;color:#4a4a50;transition:.2s;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.bx-actbtn:hover{border-color:var(--bx-red);color:var(--bx-red);}
+.bx-actbtn.is-liked{background:#fbe4e6;border-color:var(--bx-red);color:var(--bx-red-deep);font-weight:700;}
+.bx-actbtn.is-saved{background:#fff4e5;border-color:#e0a44a;color:#a86f14;font-weight:700;}
+
+/* 文字列表式视频条目 */
+.bx-vlist{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--bx-line);}
+.bx-vlist__item{
+  display:grid;grid-template-columns:38px minmax(0,1fr) auto;
+  gap:16px;align-items:center;padding:18px 4px;
+  border-bottom:1px solid var(--bx-line);
+}
+.bx-vlist__idx{font-size:19px;font-weight:900;color:var(--bx-red);opacity:.8;}
+.bx-vlist__item h3{font-size:15.5px;margin-bottom:5px;}
+.bx-vlist__item p{font-size:12.5px;color:var(--bx-mid);margin:0;}
+.bx-vlist__side{display:flex;align-items:center;gap:14px;font-size:12px;color:#8a8a90;}
+
+/* ============ 深度解析 / 关键词解析 ============ */
+.bx-deep__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;}
+.bx-deep__aside{position:relative;}
+.bx-deep__aside img{width:100%;border-radius:var(--bx-radius);aspect-ratio:3/3.6;object-fit:cover;border:1px solid var(--bx-line);}
+.bx-deep__quotebox{
+  background:var(--bx-ink);color:#f1f0ed;border-radius:var(--bx-radius);
+  padding:20px 22px;margin-top:18px;
+}
+.bx-deep__quotebox p{font-size:13.5px;color:#c3c2be;margin:0;}
+.bx-deep__quotebox b{color:#fff;}
+.bx-deep h2{margin-bottom:18px;}
+.bx-deep h3{
+  font-size:18.5px;margin:26px 0 10px;padding-left:13px;
+  border-left:3px solid var(--bx-red);
+}
+.bx-deep p{font-size:14.5px;color:#3a3a40;}
+.bx-deep__points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0;}
+.bx-deep__point{background:#fff;border:1px solid var(--bx-line);border-radius:10px;padding:13px 15px;}
+.bx-deep__point strong{display:block;font-size:13px;margin-bottom:3px;}
+.bx-deep__point span{font-size:12px;color:var(--bx-mid);}
+
+/* ============ 专题 ============ */
+.bx-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+.bx-topic{
+  border:1px solid var(--bx-line);border-radius:var(--bx-radius);
+  background:#fff;padding:22px;display:flex;flex-direction:column;
+  transition:.25s;
+}
+.bx-topic:hover{border-color:var(--bx-red);box-shadow:0 12px 28px rgba(230,57,70,.1);}
+.bx-topic__head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px;}
+.bx-topic__head h3{font-size:18px;}
+.bx-topic__status{
+  font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;
+  background:#eaf6ee;color:#1f7a45;flex:none;
+}
+.bx-topic__status--soon{background:#fff4e0;color:#a86f14;}
+.bx-topic>p{font-size:13px;color:var(--bx-mid);}
+.bx-topic ul{list-style:none;padding:0;margin:6px 0 0;border-top:1px dashed var(--bx-line);}
+.bx-topic li{
+  font-size:12.8px;padding:9px 0;border-bottom:1px dashed #f0eeea;
+  display:flex;justify-content:space-between;gap:10px;color:#3a3a40;
+}
+.bx-topic li:last-child{border-bottom:none;}
+.bx-topic li em{font-style:normal;color:#9a9a9f;font-size:11.5px;flex:none;}
+
+/* ============ 作者矩阵 ============ */
+.bx-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+.bx-author{
+  background:#fff;border:1px solid var(--bx-line);border-radius:var(--bx-radius);
+  padding:22px;display:flex;gap:16px;transition:.22s;
+}
+.bx-author:hover{box-shadow:0 12px 28px rgba(13,13,15,.08);}
+.bx-avatar{
+  width:58px;height:58px;border-radius:50%;flex:none;
+  display:grid;place-items:center;font-weight:800;color:#fff;font-size:20px;
+}
+.bx-author__name{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:3px;}
+.bx-author__name h3{font-size:16px;}
+.bx-author__field{font-size:11.5px;font-weight:700;color:var(--bx-red-deep);background:#fbe4e6;padding:2px 9px;border-radius:999px;}
+.bx-author__meta{font-size:11.5px;color:#8a8a90;margin-bottom:8px;}
+.bx-author p{font-size:12.8px;color:var(--bx-mid);margin:0;}
+.bx-author__more{
+  border:none;background:none;color:var(--bx-red);font-size:12px;
+  font-weight:700;padding:0;margin-top:8px;text-decoration:underline;
+}
+
+/* ============ 评价 ============ */
+.bx-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.bx-comment{
+  background:#fff;border:1px solid var(--bx-line);border-radius:var(--bx-radius);
+  padding:20px;display:flex;flex-direction:column;gap:10px;
+}
+.bx-comment__head{display:flex;align-items:center;gap:10px;}
+.bx-comment__avatar{
+  width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-size:13px;font-weight:800;flex:none;
+}
+.bx-comment__who strong{display:block;font-size:13px;}
+.bx-comment__who span{font-size:11px;color:#9a9a9f;}
+.bx-stars{color:#e0a44a;font-size:12px;letter-spacing:1px;}
+.bx-comment p{font-size:13.2px;color:#3a3a40;margin:0;}
+.bx-comment__quote{
+  border-left:3px solid var(--bx-red);padding-left:12px;
+  font-style:italic;color:#4a4a50;
+}
+
+/* ============ 企业动态 / 更新日志 ============ */
+.bx-news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.bx-newscard{
+  background:#fff;border:1px solid var(--bx-line);border-radius:var(--bx-radius);
+  padding:20px;transition:.22s;
+}
+.bx-newscard:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(13,13,15,.08);}
+.bx-newscard time{font-size:11.5px;color:var(--bx-red-deep);font-weight:700;letter-spacing:.05em;}
+.bx-newscard h3{font-size:15.5px;margin:8px 0 8px;}
+.bx-newscard p{font-size:12.8px;color:var(--bx-mid);margin:0;}
+
+/* ============ 合作 & FAQ ============ */
+.bx-partner-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px;}
+.bx-partner{
+  flex:1;min-width:150px;background:#fff;border:1px solid var(--bx-line);
+  border-radius:10px;padding:16px;text-align:center;
+  font-size:13px;font-weight:700;color:#4a4a50;transition:.2s;
+}
+.bx-partner:hover{border-color:var(--bx-red);color:var(--bx-red);}
+.bx-partner span{display:block;font-size:11px;font-weight:500;color:#9a9a9f;margin-top:3px;}
+.bx-faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px;}
+.bx-faq details{
+  background:#fff;border:1px solid var(--bx-line);border-radius:10px;
+  padding:14px 18px;
+}
+.bx-faq summary{
+  font-size:14px;font-weight:700;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+}
+.bx-faq summary::-webkit-details-marker{display:none;}
+.bx-faq summary::after{content:"+";color:var(--bx-red);font-size:18px;font-weight:700;}
+.bx-faq details[open] summary::after{content:"–";}
+.bx-faq p{font-size:13px;color:var(--bx-mid);margin:10px 0 0;}
+
+/* ============ 投稿 CTA ============ */
+.bx-cta{
+  background:linear-gradient(120deg,#161618,#2a1416 60%,#3d1519);
+  color:#fff;border-radius:20px;padding:40px;
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+  gap:30px;align-items:center;
+}
+.bx-cta h2{font-size:26px;margin-bottom:10px;}
+.bx-cta p{font-size:13.5px;color:#c9c8c4;max-width:46ch;}
+.bx-cta__actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;}
+
+/* ============ 页脚 ============ */
+.bx-footer{background:var(--bx-ink);color:#b9b8b4;padding:48px 0 26px;font-size:13px;}
+.bx-footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:34px;}
+.bx-footer h4{color:#fff;font-size:13.5px;margin-bottom:12px;letter-spacing:.05em;}
+.bx-footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
+.bx-footer a:hover{color:var(--bx-red);}
+.bx-footer__brand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#fff;font-weight:800;font-size:17px;}
+.bx-footer__brand .bx-brand__mark{width:30px;height:30px;font-size:15px;}
+.bx-footer__bottom{
+  border-top:1px solid #26262a;padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#7d7c79;
+}
+
+/* ============ Toast / 弹窗 / 返回顶部 ============ */
+.bx-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--bx-ink);color:#fff;padding:11px 20px;border-radius:999px;
+  font-size:13px;opacity:0;pointer-events:none;transition:.28s;z-index:300;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.bx-toast.is-show{opacity:1;transform:translate(-50%,0);}
+.bx-modal{
+  position:fixed;inset:0;background:rgba(13,13,15,.55);
+  display:none;place-items:center;z-index:400;padding:20px;
+}
+.bx-modal.is-open{display:grid;}
+.bx-modal__box{
+  background:#fff;border-radius:18px;padding:30px;width:min(520px,100%);
+  max-height:86vh;overflow:auto;position:relative;
+}
+.bx-modal__box h3{font-size:20px;margin-bottom:6px;}
+.bx-modal__box p{font-size:13.5px;color:var(--bx-mid);}
+.bx-modal__box label{display:block;font-size:12.5px;font-weight:700;margin:14px 0 6px;}
+.bx-modal__box input,.bx-modal__box textarea{
+  width:100%;border:1px solid var(--bx-line);border-radius:9px;
+  padding:10px 12px;font-size:13.5px;font-family:inherit;outline:none;
+}
+.bx-modal__box textarea{min-height:100px;resize:vertical;}
+.bx-modal__box input:focus,.bx-modal__box textarea:focus{border-color:var(--bx-red);}
+.bx-modal__close{
+  position:absolute;right:16px;top:14px;border:none;background:#f0eeea;
+  width:30px;height:30px;border-radius:50%;font-size:15px;color:#5a5a62;
+}
+.bx-to-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;
+  background:var(--bx-ink);color:#fff;border:none;font-size:16px;z-index:200;
+  opacity:0;pointer-events:none;transition:.3s;box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+.bx-to-top.is-show{opacity:1;pointer-events:auto;}
+.bx-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+.bx-share-row button{
+  border:1px solid var(--bx-line);background:#fff;border-radius:8px;
+  padding:8px 14px;font-size:12.5px;color:#3a3a40;
+}
+.bx-share-row button:hover{border-color:var(--bx-red);color:var(--bx-red);}
+
+/* ============ 响应式 ============ */
+@media (max-width:980px){
+  .bx-hero__grid,.bx-focus__grid,.bx-deep__grid,.bx-cta{grid-template-columns:minmax(0,1fr);}
+  .bx-video-grid,.bx-topic-grid,.bx-authors,.bx-comments,.bx-faq{grid-template-columns:minmax(0,1fr);}
+  .bx-news{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+  .bx-footer__grid{grid-template-columns:1fr 1fr;}
+  .bx-deep__aside img{aspect-ratio:16/10;}
+  .bx-search{display:none;}
+}
+@media (max-width:760px){
+  .bx-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--bx-line);
+    flex-direction:column;padding:14px 6%;gap:12px;
+    box-shadow:0 14px 24px rgba(0,0,0,.08);
+  }
+  .bx-nav.is-open{display:flex;}
+  .bx-header__inner{position:relative;flex-wrap:wrap;}
+  .bx-burger{display:flex;margin-left:auto;}
+  .bx-brand{font-size:17px;}
+  .bx-news{grid-template-columns:minmax(0,1fr);}
+  .bx-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+  .bx-stats__item strong{font-size:21px;}
+  .bx-faq{grid-template-columns:minmax(0,1fr);}
+  .bx-vlist__item{grid-template-columns:28px minmax(0,1fr);}
+  .bx-vlist__side{grid-column:2;justify-content:flex-start;margin-top:6px;flex-wrap:wrap;}
+  .bx-cta{padding:28px;}
+  .bx-cta__actions{justify-content:flex-start;}
+  .bx-footer__grid{grid-template-columns:minmax(0,1fr);gap:22px;}
+  .bx-deep__points{grid-template-columns:minmax(0,1fr);}
+  .bx-announce__list{gap:14px;}
+  .bx-anchor{scroll-margin-top:170px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶区：公告条 + 页头 -->
+<div class="bx-sticky-top">
+  <div class="bx-announce">
+    <div class="bx-wrap bx-announce__inner">
+      <span class="bx-announce__tag">官方发布</span>
+      <div class="bx-announce__list">
+        <span><b>11月22日</b>「城市夜行·现场追踪」专题第 4 期上线</span>
+        <span><b>11月20日</b>创作者扶持计划第二轮报名开启</span>
+        <span><b>11月18日</b>「年度真实影像票选」投票通道已启动</span>
+      </div>
+    </div>
+  </div>
+  <header class="bx-header">
+    <div class="bx-wrap bx-header__inner">
+      <a class="bx-brand" href="#bx-top">
+        <span class="bx-brand__mark">9</span>
+        <span>911爆料
+          <span class="bx-brand__sub">OFFICIAL VIDEO</span>
+        </span>
+      </a>
+      <button class="bx-burger" id="bxBurger" aria-label="展开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="bx-nav" id="bxNav">
+        <a href="#bx-focus">焦点现场</a>
+        <a href="#bx-videos">视频精选</a>
+        <a href="#bx-deep">深度解析</a>
+        <a href="#bx-topics">专题企划</a>
+        <a href="#bx-authors">创作者</a>
+        <a href="#bx-news">企业动态</a>
+        <a href="#bx-faq">帮助中心</a>
+      </nav>
+      <div class="bx-search">
+        <input type="search" id="bxSearchInput" placeholder="搜索现场、专题或创作者" aria-label="站内搜索">
+        <button id="bxSearchBtn">搜索</button>
+      </div>
+    </div>
+    <div class="bx-wrap"><div class="bx-search__hint" id="bxSearchHint"></div></div>
+  </header>
+</div>
+
+<main id="bx-top">
+
+  <!-- 首屏 -->
+  <section class="bx-hero bx-anchor" id="bx-hero">
+    <div class="bx-wrap bx-hero__grid">
+      <div>
+        <span class="bx-hero__kicker">● 官方网站 · 真实现场影像平台</span>
+        <h1>911爆料</h1>
+        <p class="bx-hero__lead">把每一次现场，交给可信的镜头。911爆料是面向公众的原创视频资讯品牌，用高清影像记录真实，用专业追踪还原脉络。</p>
+        <p class="bx-hero__desc">作为持续运营的视频内容平台，911爆料官方网站聚合现场直击、事件追踪与深度解析三类精品内容，为创作者与企业搭建值得信赖的内容生态，坚持正版、原创与用户至上。</p>
+        <div class="bx-hero__actions">
+          <a class="bx-btn bx-btn--primary" href="#bx-videos">观看本期精选 ▸</a>
+          <a class="bx-btn bx-btn--ghost" href="#bx-topics">浏览专题企划</a>
+          <button class="bx-btn bx-btn--light" id="bxSubmitTop">我要投稿</button>
+        </div>
+        <div class="bx-stats">
+          <div class="bx-stats__item"><strong>12,600+</strong><span>累计原创现场影像（条）</span></div>
+          <div class="bx-stats__item"><strong>386</strong><span>签约与入驻创作者（位）</span></div>
+          <div class="bx-stats__item"><strong>9,400万</strong><span>内容生态年度播放（次）</span></div>
+        </div>
+      </div>
+      <div class="bx-hero__visual">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 680'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23222a3a'/%3E%3Cstop offset='.55' stop-color='%234b2b33'/%3E%3Cstop offset='1' stop-color='%23110f12'/%3E%3C/linearGradient%3E%3ClinearGradient id='glow' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e63946'/%3E%3Cstop offset='1' stop-color='%23ff9a6b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='680' fill='url(%23sky)'/%3E%3Ccircle cx='600' cy='140' r='86' fill='%23e63946' opacity='.28'/%3E%3Ccircle cx='600' cy='140' r='46' fill='%23ffb4a2' opacity='.55'/%3E%3Cpath d='M0 470 L120 400 L210 440 L320 360 L430 420 L540 340 L660 410 L800 350 L800 680 L0 680 Z' fill='%2318171b'/%3E%3Cpath d='M0 530 L140 470 L260 510 L390 440 L520 500 L650 430 L800 490 L800 680 L0 680 Z' fill='%230f0e11'/%3E%3Cg stroke='%23e63946' stroke-width='3' opacity='.85'%3E%3Cline x1='110' y1='620' x2='110' y2='430'/%3E%3Cline x1='110' y1='430' x2='150' y2='430'/%3E%3Cline x1='110' y1='500' x2='142' y2='500'/%3E%3C/g%3E%3Crect x='620' y='250' width='120' height='230' rx='6' fill='%23252329'/%3E%3Cg fill='%23ffd7a8' opacity='.8'%3E%3Crect x='636' y='272' width='22' height='22'/%3E%3Crect x='672' y='272' width='22' height='22'/%3E%3Crect x='708' y='272' width='18' height='22'/%3E%3Crect x='636' y='312' width='22' height='22'/%3E%3Crect x='672' y='312' width='22' height='22'/%3E%3Crect x='636' y='352' width='22' height='22'/%3E%3C/rect%3E%3C/g%3E%3Cpath d='M330 520 q90 -70 190 -20' stroke='url(%23glow)' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='340' cy='512' r='9' fill='%23ff9a6b'/%3E%3C/svg%3E" alt="夜色城市天际线与直播灯位构成的首屏主视觉，象征911爆料的现场追踪影像" width="800" height="680">
+        <span class="bx-hero__badge"><i></i>正在直播 · 现场信号稳定</span>
+        <span class="bx-hero__corner">LIVE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="bx-section bx-anchor" id="bx-focus">
+    <div class="bx-wrap">
+      <div class="bx-sec-head">
+        <div>
+          <h2><small>FOCUS / 焦点现场</small>911爆料本期重点推荐</h2>
+          <p>由官方编辑部与签约创作者共同甄选，聚焦正在发生的真实现场，兼顾事实脉络与影像品质。</p>
+        </div>
+        <button class="bx-btn bx-btn--ghost" id="bxOpenShare">分享本期焦点</button>
+      </div>
+      <div class="bx-focus__grid">
+        <article class="bx-focus__main">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 420'%3E%3Cdefs%3E%3ClinearGradient id='a1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b3038'/%3E%3Cstop offset='1' stop-color='%23121215'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='720' height='420' fill='url(%23a1)'/%3E%3Cg opacity='.5' stroke='%23e63946' stroke-width='2' fill='none'%3E%3Ccircle cx='560' cy='120' r='60'/%3E%3Ccircle cx='560' cy='120' r='92'/%3E%3Ccircle cx='560' cy='120' r='124'/%3E%3C/g%3E%3Crect x='60' y='90' width='280' height='240' rx='8' fill='%23393d47'/%3E%3Crect x='80' y='112' width='240' height='150' rx='4' fill='%231b1d23'/%3E%3Cpath d='M120 220 L160 176 L200 210 L250 150 L286 190' stroke='%23ffb4a2' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cg fill='%23e63946'%3E%3Ccircle cx='90' cy='360' r='6'/%3E%3Ccircle cx='112' cy='360' r='6'/%3E%3Ccircle cx='134' cy='360' r='6'/%3E%3C/g%3E%3Crect x='60' y='345' width='180' height='6' rx='3' fill='%23555560'/%3E%3Crect x='470' y='250' width='200' height='120' rx='8' fill='%23202329'/%3E%3Crect x='488' y='270' width='164' height='8' rx='4' fill='%23e3b23c' opacity='.8'/%3E%3Crect x='488' y='290' width='120' height='8' rx='4' fill='%23636370'/%3E%3Crect x='488' y='310' width='150' height='8' rx='4' fill='%23636370'/%3E%3C/svg%3E" alt="夜间监控室多屏现场画面，911爆料焦点专题主图文" width="720" height="420">
+          <div class="bx-focus__body">
+            <div class="bx-tagrow">
+              <span class="bx-tag bx-tag--red">重点追踪</span>
+              <span class="bx-tag">城市现场</span>
+              <span class="bx-tag">深度解析</span>
+            </div>
+            <h3>城市夜行·第四期：一条街区的 72 小时现场影像记录</h3>
+            <p>摄制组用三昼夜连续跟拍，完整记录了街区从黄昏到凌晨的变化。911爆料编辑部同步整理了时间轴与关键节点，帮助你理解画面背后的真实脉络，而不是只看一段被剪碎的片段。</p>
+            <div class="bx-meta">
+              <span>创作者：夜行记录组</span><span>时长 24:16</span><span>播放 128.4万</span><span>点赞 3.2万</span>
+            </div>
+            <div class="bx-vcard__foot">
+              <div class="bx-actions">
+                <button class="bx-actbtn" data-like>♡ 点赞 <b>3.2万</b></button>
+                <button class="bx-actbtn" data-save>☆ 收藏</button>
+                <button class="bx-actbtn" data-copy>⧉ 复制链接</button>
+              </div>
+              <a class="bx-btn bx-btn--primary" href="#bx-videos" style="padding:7px 16px;font-size:12.5px;">立即观看</a>
+            </div>
+          </div>
+        </article>
+        <div class="bx-focus__list">
+          <article class="bx-minicard">
+            <div class="bx-minicard__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' fill='%23233b4d'/%3E%3Cpath d='M0 110 L40 78 L80 100 L120 62 L160 88 L160 160 L0 160 Z' fill='%23142736'/%3E%3Ccircle cx='118' cy='42' r='20' fill='%23f0c36d' opacity='.85'/%3E%3C/svg%3E" alt="清晨楼群与金色晨光的缩略图，对应早间现场追踪条目" width="160" height="160">
+            </div>
+            <div>
+              <h3>早高峰路口的十二分钟</h3>
+              <p>用固定机位记录一个路口的秩序与温度。</p>
+              <div class="bx-meta"><span>林川现场</span><span>8.2万播放</span></div>
+            </div>
+          </article>
+          <article class="bx-minicard">
+            <div class="bx-minicard__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' fill='%23412a3c'/%3E%3Cg stroke='%23e8b4c8' stroke-width='3' opacity='.7'%3E%3Cpath d='M20 130 L60 90 L100 118 L140 60'/%3E%3C/g%3E%3Ccircle cx='60' cy='90' r='8' fill='%23fff' opacity='.8'/%3E%3Ccircle cx='100' cy='118' r='6' fill='%23ffd8a8'/%3E%3C/svg%3E" alt="紫色调的采访轨迹图缩略图，对应创作者访谈条目" width="160" height="160">
+            </div>
+            <div>
+              <h3>镜头之后：三位现场记录者的自述</h3>
+              <p>他们如何在复杂环境里保持拍摄与判断。</p>
+              <div class="bx-meta"><span>编辑部访谈</span><span>6.7万播放</span></div>
+            </div>
+          </article>
+          <article class="bx-minicard">
+            <div class="bx-minicard__thumb">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' fill='%232d3a2f'/%3E%3Cg fill='%239fd18a' opacity='.7'%3E%3Crect x='24' y='96' width='18' height='40'/%3E%3Crect x='54' y='76' width='18' height='60'/%3E%3Crect x='84' y='106' width='18' height='30'/%3E%3Crect x='114' y='56' width='18' height='80'/%3E%3C/g%3E%3C/svg%3E" alt="绿色柱状统计图缩略图，对应数据复盘条目" width="160" height="160">
+            </div>
+            <div>
+              <h3>11月现场内容数据复盘</h3>
+              <p>播放结构、完播率与新晋创作者表现。</p>
+              <div class="bx-meta"><span>官方数据组</span><span>4.1万播放</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 视频精选（两列卡片 + 文字列表） -->
+  <section class="bx-section bx-section--tint bx-anchor" id="bx-videos">
+    <div class="bx-wrap">
+      <div class="bx-sec-head">
+        <div>
+          <h2><small>VIDEO / 视频精选</small>911爆料高清原创内容</h2>
+          <p>两列图文卡片承载重点条目，其余以文字列表呈现，方便快速浏览与检索。</p>
+        </div>
+      </div>
+
+      <div class="bx-video-grid" id="bxVideoGrid">
+
+        <article class="bx-vcard">
+          <div class="bx-vcard__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231d2430'/%3E%3Cstop offset='1' stop-color='%233c1f26'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v1)'/%3E%3Cg opacity='.55' stroke='%23e63946' stroke-width='2'%3E%3Cpath d='M0 250 L100 200 L200 240 L320 170 L440 220 L560 160 L640 200'/%3E%3C/g%3E%3Crect x='420' y='70' width='150' height='100' rx='6' fill='%232a2e38'/%3E%3Crect x='436' y='86' width='60' height='8' rx='4' fill='%23e63946'/%3E%3Crect x='436' y='106' width='110' height='7' rx='3.5' fill='%236a6d78'/%3E%3Crect x='436' y='126' width='90' height='7' rx='3.5' fill='%236a6d78'/%3E%3Ccircle cx='120' cy='150' r='52' fill='none' stroke='%23ffb4a2' stroke-width='3' opacity='.6'/%3E%3Ccircle cx='120' cy='150' r='26' fill='%23e63946' opacity='.7'/%3E%3C/svg%3E" alt="夜间街区现场监控视角封面图，用于城市夜行视频" width="640" height="360">
+            <span class="bx-vcard__play"><span>▶</span></span>
+            <span class="bx-vcard__dur">24:16</span>
+          </div>
+          <div class="bx-vcard__body">
+            <div class="bx-tagrow"><span class="bx-tag bx-tag--red">官方精选</span><span class="bx-tag">城市探索</span></div>
+            <h3>城市夜行·第四期：一条街区的 72 小时</h3>
+            <p>三昼夜连续跟拍，配合时间轴标注，完整还原街区从黄昏到凌晨的真实节奏与突发瞬间。</p>
+            <div class="bx-vcard__foot">
+              <div class="bx-meta"><span>夜行记录组</span><span>128.4万播放</span></div>
+              <div class="bx-actions">
+                <button class="bx-actbtn" data-like>♡ <b>3.2万</b></button>
+                <button class="bx-actbtn" data-save>☆ 收藏</button>
+                <button class="bx-actbtn" data-comment>💬 评论</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="bx-vcard">
+          <div class="bx-vcard__cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f2ece1'/%3E%3Crect x='40' y='40' width='240' height='280' rx='8' fill='%23e0d6c4'/%3E%3Crect x='64' y='64' width='192' height='120' rx='4' fill='%23bfae94'/%3E%3Cg fill='%23968368'%3E%3Crect x='64' y='204' width='150' height='9' rx='4.5'/%3E%3Crect x='64' y='226' width='188' height='9' rx='4.5'/%3E%3Crect x='64' y='248' width='120' height='9' rx='4.5'/%3E%3C/g%3E%3Cg stroke='%23c25a4a' stroke-width='6' fill='none' stroke-linecap='round'%3E%3Cpath d='M380 250 L440 250 L470 170 L510 270 L550 210'/%3E%3C/g%3E%3Ccircle cx='470' cy='170' r='9' fill='%23c25a4a'/%3E%3Ccircle cx='510' cy='270' r='9' fill='%23c25a4a'/%3E%3Crect x='380' y='80' width='200' height='12' rx='6' fill='%23a39680'/%3E%3Crect x='380' y='108' width='150' height='12' rx='6' fill='%23c9bda8'/%3E%3C/svg%3E" alt="米色桌面上的叙事脚本与曲线草图，用于叙事结构教程封面" width="640" height="360">
+            <span class="bx-vcard__play"><span>▶</span></span>
+            <span class="bx-vcard__dur">16:42</span>
+          </div>
+          <div class="bx-vcard__body">
+            <div class="bx-tagrow"><span class="bx-tag">教程干货</span><span class="bx-tag">创作幕后</span></div>
+            <h3>现场影像的叙事结构：从素材到成片的 5 个步骤</h3>
+            <p>从素材清洗、事件排序到节奏控制，一位从业十年的剪辑师拆解现场类视频的讲述方法。</p>
+            <div class="bx-vcard__foot">
+              <div class="bx-meta"><span>剪辑师阿杭</span><span>62.8万播放</span></div>
+              <div class="bx-actions">
+                <button class="bx-actbtn" data-like>♡ <b>1.7万</b></button>
+                <button class="bx-actbtn" data-save>☆ 收藏</button>
+                <button class="bx-actbtn" data-comment>💬 评论</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="bx-vlist" id="bxVideoList">
+        <div class="bx-vlist__item">
+          <span class="bx-vlist__idx">01</span>
+          <div>
+            <h3>晚班地铁里的十五种情绪</h3>
+            <p>观察式纪录短片：末班车厢中陌生人的疲惫、困意与小小的善意。</p>
+            <div class="bx-meta"><span>创作者：宋小满</span><span>城市探索</span></div>
+          </div>
+          <div class="bx-vlist__side">
+            <span>41.3万播放</span>
+            <button class="bx-actbtn" data-like>♡ <b>9821</b></button>
+            <button class="bx-actbtn" data-save>☆</button>
+          </div>
+        </div>
+        <div class="bx-vlist__item">
+          <span class="bx-vlist__idx">02</span>
+          <div>
+            <h3>一间 24 小时便利店的三次交接班</h3>
+            <p>用三个固定时段呈现同一家店的秩序、补货与夜归人。</p>
+            <div class="bx-meta"><span>创作者：陈默现场</span><span>生活方式</span></div>
+          </div>
+          <div class="bx-vlist__side">
+            <span>35.7万播放</span>
+            <button class="bx-actbtn" data-like>♡ <b>7604</b></button>
+            <button class="bx-actbtn" data-save>☆</button>
+          </div>
+        </div>
+        <div class="bx-vlist__item">
+          <span class="bx-vlist__idx">03</span>
+          <div>
+            <h3>雨天摄影的曝光与收音清单</h3>
+            <p>设备清单、防雨方案与现场收音技巧，附可直接照做的检查表。</p>
+            <div class="bx-meta"><span>创作者：器材老周</span><span>实用技巧</span></div>
+          </div>
+          <div class="bx-vlist__side">
+            <span>28.9万播放</span>
+            <button class="bx-actbtn" data-like>♡ <b>6102</b></button>
+            <button class="bx-actbtn" data-save>☆</button>
+          </div>
+        </div>
+        <div class="bx-vlist__item">
+          <span class="bx-vlist__idx">04</span>
+          <div>
+            <h3>专访：把突发场景拍清楚的六个判断</h3>
+            <p>从站位、光线到沟通边界，资深记者谈现场拍摄的职业准则。</p>
+            <div class="bx-meta"><span>创作者：编辑部访谈</span><span>人物访谈</span></div>
+          </div>
+          <div class="bx-vlist__side">
+            <span>23.4万播放</span>
+            <button class="bx-actbtn" data-like>♡ <b>5240</b></button>
+            <button class="bx-actbtn" data-save>☆</button>
+          </div>
+        </div>
+        <div class="bx-vlist__item">
+          <span class="bx-vlist__idx">05</span>
+          <div>
+            <h3>从一条 40 秒视频看懂事件时间轴</h3>
+            <p>知识科普向：如何用时间轴与关键帧建立可复核的现场叙述。</p>
+            <div class="bx-meta"><span>创作者：糖粒子</span><span>知识科普</span></div>
+          </div>
+          <div class="bx-vlist__side">
+            <span>19.6万播放</span>
+            <button class="bx-actbtn" data-like>♡ <b>4388</b></button>
+            <button class="bx-actbtn" data-save>☆</button>
+          </div>
+        </div>
+        <div class="bx-vlist__item">
+          <span class="bx-vlist__idx">06</span>
+          <div>
+            <h3>凌晨四点的菜市场：声音与光的现场笔记</h3>
+            <p>以环境声为主的治愈影像，记录城市最早醒来的那批人。</p>
+            <div class="bx-meta"><span>创作者：林川现场</span><span>治愈影像</span></div>
+          </div>
+          <div class="bx-vlist__side">
+            <span>17.1万播放</span>
+            <button class="bx-actbtn" data-like>♡ <b>3902</b></button>
+            <button class="bx-actbtn" data-save>☆</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析（关键词解析 800+ 字） -->
+  <section class="bx-section bx-anchor" id="bx-deep">
+    <div class="bx-wrap">
+      <div class="bx-sec-head">
+        <div>
+          <h2><small>INSIGHT / 深度解析</small>911爆料是什么，以及我们如何做内容</h2>
+          <p>一段完整的品牌说明与内容方法论，帮助你判断这里的内容是否值得长期关注。</p>
+        </div>
+      </div>
+      <div class="bx-deep__grid">
+        <div class="bx-deep__aside">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 580'%3E%3Cdefs%3E%3ClinearGradient id='d1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e9e5dc'/%3E%3Cstop offset='1' stop-color='%23cfc9bc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='580' fill='url(%23d1)'/%3E%3Crect x='48' y='70' width='384' height='440' rx='10' fill='%23fbf9f5' stroke='%23d3ccbe'/%3E%3Crect x='48' y='70' width='384' height='64' rx='10' fill='%23e63946'/%3E%3Crect x='80' y='96' width='140' height='12' rx='6' fill='%23ffffff' opacity='.9'/%3E%3Cg fill='%23bdb5a6'%3E%3Crect x='80' y='170' width='320' height='10' rx='5'/%3E%3Crect x='80' y='196' width='260' height='10' rx='5'/%3E%3Crect x='80' y='222' width='300' height='10' rx='5'/%3E%3Crect x='80' y='248' width='200' height='10' rx='5'/%3E%3C/g%3E%3Crect x='80' y='292' width='320' height='120' rx='8' fill='%23efe9dd' stroke='%23d3ccbe'/%3E%3Cpath d='M100 380 L150 340 L200 366 L250 316 L310 352 L380 310' stroke='%23e63946' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cg fill='%23c25a4a'%3E%3Ccircle cx='150' cy='340' r='6'/%3E%3Ccircle cx='250' cy='316' r='6'/%3E%3Ccircle cx='380' cy='310' r='6'/%3E%3C/g%3E%3Crect x='80' y='440' width='120' height='34' rx='17' fill='%23232328'/%3E%3Crect x='96' y='454' width='88' height='7' rx='3.5' fill='%23a5a19a'/%3E%3C/svg%3E" alt="桌面上的内容方法论稿件与趋势曲线，911爆料深度解析配图" width="480" height="580">
+          <div class="bx-deep__quotebox">
+            <p><b>“先核实，再讲述；先完整，再精彩。”</b><br>这是 911爆料编辑部写在选题会墙上的两句话，也是我们判断一条内容能不能上首页的第一标准。</p>
+          </div>
+        </div>
+        <div class="bx-deep">
+          <h3>一、品牌定位：做一个可信赖的视频资讯平台</h3>
+          <p>911爆料是一个以真实现场影像为核心表现形式的视频资讯品牌。我们不是简单搬运镜头的聚合站，而是从选题策划、现场采集、事实核对、剪辑成片到上线分发，全流程都由编辑规范约束的官方网站。在内容方向上，我们聚焦三条主线：现场直击、事件追踪与深度解析。前者回答“发生了什么”，中者回答“怎么发展到现在”，后者回答“为什么值得关注”。三条主线互为支撑，构成平台的内容骨架。</p>
+          <p>我们把自己定义为“可信现场”的基础设施。平台坚持原创与正版，所有上线片源都经过来源登记与素材授权核对；涉及公共场景的内容会做隐私与安全处理；涉及争议信息的内容会标注信息来源与时间节点，方便用户自行判断。这种看似笨重的流程，恰恰是企业级内容平台与随意剪辑账号之间最明显的区别。</p>
+          <h3>二、内容方法论：时间轴、关键帧与多方信源</h3>
+          <p>在具体制作上，911爆料形成了一套可复用的方法论。第一层是时间轴：把事件拆成若干可验证的节点，每个节点对应具体的时刻、地点与画面依据。第二层是关键帧：从素材里挑出信息密度最高的画面，用静止帧与局部放大的方式帮助观众看清细节。第三层是多方信源：同一段画面，至少引入两个独立来源做交叉核对，如果存在差异，我们会把差异本身呈现出来，而不是把不同说法强行缝合成一个结论。</p>
+          <p>在视觉呈现上，平台坚持高清与专业：封面统一比例，字幕统一字号与安全区，重要信息用图示与对照表说明。对于普通用户来说，这些规范意味着更少的误解；对于创作者来说，这是一套可以学习、可以复用的创作标准。我们也把部分规范开放为创作攻略，鼓励更多创作者上传符合标准的作品，参与社区共建。</p>
+          <h3>三、内容生态：创作者、用户与品牌的三方协作</h3>
+          <p>911爆料的内容生态由三部分构成。其一是创作者：既有全职的现场记录者，也有分布在各个城市的兼职拍手与剪辑师，他们提供一线素材与本地视角。其二是用户：用户的评论、纠错与投票，是平台调整选题优先级的重要依据；我们开设了固定的纠错入口与投票通道，让社区真实参与内容治理。其三是品牌与企业伙伴：通过正版内容合作、专题共创与技术支持，与平台共同提升影像表达能力。</p>
+          <p>为了让这个生态持续运转，平台建立了创作者扶持计划，提供选题支持、素材归档工具与分成机制。我们相信，“值得信赖”不是一句口号，而是靠一条条可复核的内容、一次次及时纠错累积出来的口碑。也正因如此，平台持续运营的重点从不是追逐热点速度，而是让每一条上线的911爆料内容都经得起回看。</p>
+          <h3>四、边界与责任：真实不等于无差别公开</h3>
+          <p>做现场类内容，绕不开边界问题。911爆料在编辑规范中明确了三条红线：不展示可能引发模仿风险的操作细节；不对当事人做未经许可的身份推断；不以煽动情绪作为流量手段。我们在片头统一标注内容属性，在片尾提供信息反馈渠道。社会责任与用户至上，在这里是具体到每一帧的取舍，而不是空泛的表述。</p>
+          <p>与此同时，我们也努力让内容保留温度。除了硬信息，平台同样重视那些安静的现场：清晨的菜市场、雨夜的公交站、深夜便利店的交接班。这些影像没有喧闹的配乐，却构成了城市真实的一面。多元与包容，是我们在选题会上反复强调的两个词，也是平台保持长期生命力的原因。</p>
+          <div class="bx-deep__points">
+            <div class="bx-deep__point"><strong>选题核验</strong><span>至少两个独立来源交叉确认</span></div>
+            <div class="bx-deep__point"><strong>素材授权</strong><span>逐条登记来源与使用范围</span></div>
+            <div class="bx-deep__point"><strong>成片规范</strong><span>统一字幕、图示与安全区</span></div>
+            <div class="bx-deep__point"><strong>社区纠错</strong><span>48 小时内响应有效反馈</span></div>
+          </div>
+          <p>如果你第一次来到911爆料官方网站，建议从“专题企划”开始看：专题会把分散的片段串成完整叙事，也比单条视频更能体现平台的专业度。如果你已经是长期用户，欢迎通过投稿入口上传你的现场记录，或参与正在进行的投票，让更多值得被看见的真实被看见。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="bx-section bx-section--tint bx-anchor" id="bx-topics">
+    <div class="bx-wrap">
+      <div class="bx-sec-head">
+        <div>
+          <h2><small>SERIES / 专题企划</small>911爆料正在进行的专题</h2>
+          <p>每个专题由编辑部与创作者共同策划，持续更新，并按集归档，方便连续观看。</p>
+        </div>
+        <button class="bx-btn bx-btn--ghost" id="bxVoteBtn">参与专题投票</button>
+      </div>
+      <div class="bx-topic-grid">
+        <article class="bx-topic">
+          <div class="bx-topic__head">
+            <h3>城市夜行 · 现场追踪</h3>
+            <span class="bx-topic__status">更新中</span>
+          </div>
+          <p>以夜间城市为观察对象，连续记录街区、交通节点与夜间工作者的真实状态，每期配一份时间轴复盘。</p>
+          <ul>
+            <li><span>第 4 期 · 一条街区的 72 小时</span><em>11/22</em></li>
+            <li><span>第 3 期 · 末班地铁的乘客图谱</span><em>11/15</em></li>
+            <li><span>第 2 期 · 便利店交接班观察</span><em>11/08</em></li>
+          </ul>
+        </article>
+        <article class="bx-topic">
+          <div class="bx-topic__head">
+            <h3>镜头之后 · 创作者访谈</h3>
+            <span class="bx-topic__status">更新中</span>
+          </div>
+          <p>走进现场记录者的工作现场，聊器材、聊判断、聊那些没有拍进成片的取舍。</p>
+          <ul>
+            <li><span>三位记录者的自述（上）</span><em>11/20</em></li>
+            <li><span>如何判断一个现场值得拍</span><em>11/13</em></li>
+            <li><span>剪辑台上的伦理边界</span><em>11/06</em></li>
+          </ul>
+        </article>
+        <article class="bx-topic">
+          <div class="bx-topic__head">
+            <h3>年度真实影像票选</h3>
+            <span class="bx-topic__status bx-topic__status--soon">投票开启</span>
+          </div>
+          <p>由用户投票与编辑评审共同产生年度榜单，覆盖现场、纪录、访谈与创意四类作品。</p>
+          <ul>
+            <li><span>候选作品征集（进行中）</span><em>11/18</em></li>
+            <li><span>大众投票通道开启</span><em>11/18</em></li>
+            <li><span>评审团名单公布</span><em>11/10</em></li>
+          </ul>
+        </article>
+        <article class="bx-topic">
+          <div class="bx-topic__head">
+            <h3>雨天拍摄攻略 · 实用手册</h3>
+            <span class="bx-topic__status bx-topic__status--soon">策划中</span>
+          </div>
+          <p>面向新手创作者的实操专题：设备防护、光线处理、收音方案与现场安全清单。</p>
+          <ul>
+            <li><span>器材清单初稿完成</span><em>11/17</em></li>
+            <li><span>现场测试拍摄完成</span><em>11/12</em></li>
+            <li><span>选题会通过，进入制作</span><em>11/05</em></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="bx-section bx-anchor" id="bx-authors">
+    <div class="bx-wrap">
+      <div class="bx-sec-head">
+        <div>
+          <h2><small>CREATORS / 创作者</small>911爆料的双列创作者名录</h2>
+          <p>他们来自不同城市与职业，共同构成了平台持续运营的内容底座。</p>
+        </div>
+      </div>
+      <div class="bx-authors">
+        <article class="bx-author">
+          <div class="bx-avatar" style="background:#2c3e50;">夜</div>
+          <div>
+            <div class="bx-author__name">
+              <h3>夜行记录组</h3>
+              <span class="bx-author__field">城市现场</span>
+            </div>
+            <div class="bx-author__meta">作品 128 · 粉丝 24.6万</div>
+            <p>三人小组，专注夜间城市影像。习惯用固定机位与长时间等待换取真实瞬间，擅长把零散画面整理成可读的时间线索。相信耐心的镜头比激烈的剪辑更有力量。</p>
+            <button class="bx-author__more" data-author="夜行记录组">查看主页介绍</button>
+          </div>
+        </article>
+        <article class="bx-author">
+          <div class="bx-avatar" style="background:#8e44ad;">杭</div>
+          <div>
+            <div class="bx-author__name">
+              <h3>剪辑师阿杭</h3>
+              <span class="bx-author__field">教程干货</span>
+            </div>
+            <div class="bx-author__meta">作品 96 · 粉丝 18.3万</div>
+            <p>十年后期从业者，做过纪录片也做过新闻短片。课程风格务实，喜欢把抽象节奏拆成可执行的步骤表，常被新手创作者称为“最能落地的剪辑老师”。</p>
+            <button class="bx-author__more" data-author="剪辑师阿杭">查看主页介绍</button>
+          </div>
+        </article>
+        <article class="bx-author">
+          <div class="bx-avatar" style="background:#16a085;">林</div>
+          <div>
+            <div class="bx-author__name">
+              <h3>林川现场</h3>
+              <span class="bx-author__field">日常记录</span>
+            </div>
+            <div class="bx-author__meta">作品 210 · 粉丝 31.2万</div>
+            <p>常驻城市清晨的拍手，作品多为环境声短片。擅长在嘈杂里找到安静的段落，用十二分钟记录一个路口，也能让观众看完不觉得漫长。</p>
+            <button class="bx-author__more" data-author="林川现场">查看主页介绍</button>
+          </div>
+        </article>
+        <article class="bx-author">
+          <div class="bx-avatar" style="background:#d35400;">默</div>
+          <div>
+            <div class="bx-author__name">
+              <h3>陈默现场</h3>
+              <span class="bx-author__field">生活方式</span>
+            </div>
+            <div class="bx-author__meta">作品 74 · 粉丝 12.9万</div>
+            <p>偏爱小空间与重复动作，作品多围绕便利店、公交站与深夜小店展开。认为纪录片的价值不只在事件里，也在无数普通人的日常节奏里。</p>
+            <button class="bx-author__more" data-author="陈默现场">查看主页介绍</button>
+          </div>
+        </article>
+        <article class="bx-author">
+          <div class="bx-avatar" style="background:#2980b9;">糖</div>
+          <div>
+            <div class="bx-author__name">
+              <h3>糖粒子</h3>
+              <span class="bx-author__field">知识科普</span>
+            </div>
+            <div class="bx-author__meta">作品 63 · 粉丝 9.7万</div>
+            <p>前媒体编辑，现做知识科普视频。擅长把复杂时间线讲成普通人一听就懂的图表，坚持每条内容标注信息来源，被社区称为“最较真的科普创作者”。</p>
+            <button class="bx-author__more" data-author="糖粒子">查看主页介绍</button>
+          </div>
+        </article>
+        <article class="bx-author">
+          <div class="bx-avatar" style="background:#7f8c8d;">周</div>
+          <div>
+            <div class="bx-author__name">
+              <h3>器材老周</h3>
+              <span class="bx-author__field">实用技巧</span>
+            </div>
+            <div class="bx-author__meta">作品 152 · 粉丝 15.4万</div>
+            <p>器材测评与实操技巧作者，口播干脆、不绕弯子。每期给出可直接照做的清单与预算建议，也乐于在评论区回答新手的具体设备问题。</p>
+            <button class="bx-author__more" data-author="器材老周">查看主页介绍</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价（双列短评 + 引用） -->
+  <section class="bx-section bx-section--tint bx-anchor" id="bx-comments">
+    <div class="bx-wrap">
+      <div class="bx-sec-head">
+        <div>
+          <h2><small>COMMUNITY / 口碑</small>用户如何评价911爆料</h2>
+          <p>来自社区的真实反馈，涵盖观看体验、内容质量与创作者生态等不同维度。</p>
+        </div>
+      </div>
+      <div class="bx-comments">
+        <article class="bx-comment">
+          <div class="bx-comment__head">
+            <div class="bx-comment__avatar" style="background:#34495e;">Q</div>
+            <div class="bx-comment__who"><strong>晴天看片</strong><span>11月20日</span></div>
+            <span class="bx-stars">★★★★★</span>
+          </div>
+          <p>最打动我的是时间轴标注，看完能清楚知道每个画面发生在什么时候。比起只知道在吵的短视频，这种表达更值得信赖。</p>
+        </article>
+        <article class="bx-comment">
+          <div class="bx-comment__head">
+            <div class="bx-comment__avatar" style="background:#c0392b;">L</div>
+            <div class="bx-comment__who"><strong>老李在城南</strong><span>11月19日</span></div>
+            <span class="bx-stars">★★★★★</span>
+          </div>
+          <p class="bx-comment__quote">“先核实，再讲述”这句话我在好几期片尾都看到了，能做到这一点不容易。</p>
+        </article>
+        <article class="bx-comment">
+          <div class="bx-comment__head">
+            <div class="bx-comment__avatar" style="background:#27ae60;">小</div>
+            <div class="bx-comment__who"><strong>小满的剪辑本</strong><span>11月17日</span></div>
+            <span class="bx-stars">★★★★☆</span>
+          </div>
+          <p>教程区质量很稳，雨天拍摄那期把清单和预算都列了，我照着买了两样配件。唯一希望更新再快一点。</p>
+        </article>
+        <article class="bx-comment">
+          <div class="bx-comment__head">
+            <div class="bx-comment__avatar" style="background:#8e44ad;">A</div>
+            <div class="bx-comment__who"><strong>阿良的相机</strong><span>11月16日</span></div>
+            <span class="bx-stars">★★★★★</span>
+          </div>
+          <p>作为同行，我比较在意信息的完整性。这里的片源会标明来源，争议点也会保留不同说法，这种克制让我愿意长期关注。</p>
+        </article>
+        <article class="bx-comment">
+          <div class="bx-comment__head">
+            <div class="bx-comment__avatar" style="background:#e67e22;">城</div>
+            <div class="bx-comment__who"><strong>城市慢跑者</strong><span>11月14日</span></div>
+            <span class="bx-stars">★★★★☆</span>
+          </div>
+          <p>页面看着舒服，分类清楚。我一般是先看专题，再回头补单条视频。希望以后能按城市筛选，那样会更方便。</p>
+        </article>
+        <article class="bx-comment">
+          <div class="bx-comment__head">
+            <div class="bx-comment__avatar" style="background:#2c3e50;">南</div>
+            <div class="bx-comment__who"><strong>南方小站</strong><span>11月12日</span></div>
+            <span class="bx-stars">★★★★★</span>
+          </div>
+          <p class="bx-comment__quote">“真实不等于无差别公开”，这句话让我决定留下来。做内容有边界，才谈得上专业。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 / 合作 / FAQ -->
+  <section class="bx-section bx-anchor" id="bx-news">
+    <div class="bx-wrap">
+      <div class="bx-sec-head">
+        <div>
+          <h2><small>BRAND / 企业动态</small>911爆料官方发布与内容更新</h2>
+          <p>品牌资讯、内容运营与社区规则的更新记录，均在此同步。</p>
+        </div>
+      </div>
+      <div class="bx-news">
+        <article class="bx-newscard">
+          <time>2026 / 11 / 22</time>
+          <h3>「城市夜行」第四期上线并开放讨论</h3>
+          <p>本期配套时间轴复盘已同步发布，欢迎在评论区指出可以补充的节点。</p>
+        </article>
+        <article class="bx-newscard">
+          <time>2026 / 11 / 20</time>
+          <h3>创作者扶持计划第二轮报名开启</h3>
+          <p>面向现场记录与剪辑方向，提供选题支持、素材归档工具与分成方案。</p>
+        </article>
+        <article class="bx-newscard">
+          <time>2026 / 11 / 18</time>
+          <h3>年度真实影像票选投票通道启动</h3>
+          <p>大众投票与编辑评审同步进行，最终榜单将在 12 月中旬公布。</p>
+        </article>
+      </div>
+
+      <div style="margin-top:38px;">
+        <h3 style="font-size:18px;margin-bottom:16px;">合作品牌与伙伴</h3>
+        <div class="bx-partner-row">
+          <div class="bx-partner">光年影像器材<span>设备支持</span></div>
+          <div class="bx-partner">城市纪录片联盟<span>联合企划</span></div>
+          <div class="bx-partner">知返数据<span>内容分析</span></div>
+          <div class="bx-partner">山海动画工作室<span>视觉设计</span></div>
+          <div class="bx-partner">新知书院<span>知识顾问</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:34px;" class="bx-anchor" id="bx-faq">
+        <h2 style="font-size:22px;margin-bottom:8px;"><small style="display:block;font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--bx-red);margin-bottom:8px;">FAQ / 帮助中心</small>关于911爆料的常见问题</h2>
+        <p style="font-size:13.5px;color:var(--bx-mid);margin-bottom:20px;">如仍有疑问，可通过页脚的联系方式与我们取得联系。</p>
+        <div class="bx-faq">
+          <details open>
+            <summary>911爆料的主要内容范围是什么？</summary>
+            <p>平台内容分为现场直击、事件追踪与深度解析三条主线，并配套创作者访谈、实操教程与专题企划，全部为原创或经授权的高清内容。</p>
+          </details>
+          <details>
+            <summary>如何投稿或上传我的现场记录？</summary>
+            <p>点击页面中的“投稿”按钮填写基本信息，编辑会在 3 个工作日内回复。素材请保留原始文件与拍摄时间，便于核对。</p>
+          </details>
+          <details>
+            <summary>内容出现错误时如何反馈？</summary>
+            <p>可在对应视频下留言，或通过页脚的反馈渠道提交。有效的纠错信息我们会在 48 小时内响应并更新内容说明。</p>
+          </details>
+          <details>
+            <summary>平台如何保护当事人隐私？</summary>
+            <p>涉及公共场景的内容会进行必要的面孔与信息处理，不对当事人身份做未经许可的推断，也不展示可能引发模仿风险的操作细节。</p>
+          </details>
+          <details>
+            <summary>创作者扶持计划怎么参与？</summary>
+            <p>每季度开放报名，需提交 1 至 3 条原创作品与选题方向。入选后获得选题支持、工具账号与分成方案，具体规则以官方发布为准。</p>
+          </details>
+          <details>
+            <summary>可以使用平台内容做二次创作吗？</summary>
+            <p>需取得平台书面授权并注明来源，禁止用于误导性剪辑或商业盗用。我们鼓励在授权范围内进行多元表达与创新。</p>
+          </details>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;">
+        <div class="bx-cta">
+          <div>
+            <h2>把你的镜头，交给值得信赖的平台</h2>
+            <p>911爆料持续面向全国征集真实现场影像。无论是突发记录、城市观察，还是安静的日常片段，只要真实、清晰、有讲述价值，都欢迎上传参与。</p>
+          </div>
+          <div class="bx-cta__actions">
+            <button class="bx-btn bx-btn--primary" id="bxSubmitCta">立即投稿</button>
+            <button class="bx-btn bx-btn--light" id="bxFeedbackCta">反馈建议</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bx-footer">
+  <div class="bx-wrap">
+    <div class="bx-footer__grid">
+      <div>
+        <div class="bx-footer__brand"><span class="bx-brand__mark">9</span>911爆料</div>
+        <p style="max-width:34ch;">911爆料官方网站，真实现场影像与深度解析内容平台，持续运营中。</p>
+        <p style="font-size:12px;color:#7d7c79;">坚持原创与正版，构建值得信赖的内容生态。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#bx-focus">焦点现场</a></li>
+          <li><a href="#bx-videos">视频精选</a></li>
+          <li><a href="#bx-deep">深度解析</a></li>
+          <li><a href="#bx-topics">专题企划</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区与参与</h4>
+        <ul>
+          <li><a href="#bx-authors">创作者名录</a></li>
+          <li><a href="#bx-comments">用户口碑</a></li>
+          <li><button class="bx-actbtn" id="bxSubmitFooter" style="background:none;border:none;padding:0;color:inherit;font-size:13px;">投稿入口</button></li>
+          <li><button class="bx-actbtn" id="bxVoteFooter" style="background:none;border:none;padding:0;color:inherit;font-size:13px;">专题投票</button></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>合作邮箱：contact@911baoliao.example</li>
+          <li>内容纠错：feedback@911baoliao.example</li>
+          <li>工作时间：周一至周五 10:00–19:00</li>
+          <li><button class="bx-actbtn" id="bxShareFooter" style="background:none;border:none;padding:0;color:inherit;font-size:13px;">分享本站</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bx-footer__bottom">
+      <span>© 2026 911爆料 官方网站 · 版权所有 · 持续运营中</span>
+      <span>备案号：京ICP备2026000000号-2 · 广播电视节目制作经营许可（示例）</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bx-toast" id="bxToast"></div>
+
+<!-- 分享 / 复制弹窗 -->
+<div class="bx-modal" id="bxShareModal">
+  <div class="bx-modal__box">
+    <button class="bx-modal__close" data-close>✕</button>
+    <h3>分享 911爆料</h3>
+    <p>把这期焦点内容分享给朋友，或复制链接保存到你的收藏夹。</p>
+    <div class="bx-share-row">
+      <button data-copy>复制链接</button>
+      <button data-share="wechat">微信分享</button>
+      <button data-share="weibo">微博分享</button>
+      <button data-share="qq">QQ 分享</button>
+    </div>
+    <p style="margin-top:16px;font-size:12px;color:#9a9a9f;">分享会打开对应平台的说明提示，本页不会跳转外部链接。</p>
+  </div>
+</div>
+
+<!-- 投稿弹窗 -->
+<div class="bx-modal" id="bxSubmitModal">
+  <div class="bx-modal__box">
+    <button class="bx-modal__close" data-close>✕</button>
+    <h3>投稿 / 上传作品</h3>
+    <p>请填写基本信息，编辑将在 3 个工作日内通过邮件回复。</p>
+    <label for="bxSName">你的称呼</label>
+    <input id="bxSName" type="text" placeholder="例如：城市记录者">
+    <label for="bxSContact">联系方式</label>
+    <input id="bxSContact" type="text" placeholder="邮箱或常用社交账号">
+    <label for="bxSDesc">作品简介</label>
+    <textarea id="bxSDesc" placeholder="拍摄时间、地点、内容类型与素材情况"></textarea>
+    <div style="margin-top:18px;display:flex;gap:10px;justify-content:flex-end;">
+      <button class="bx-btn bx-btn--light" data-close>取消</button>
+      <button class="bx-btn bx-btn--primary" id="bxSubmitSend">提交</button>
+    </div>
+  </div>
+</div>
+
+<!-- 反馈弹窗 -->
+<div class="bx-modal" id="bxFeedbackModal">
+  <div class="bx-modal__box">
+    <button class="bx-modal__close" data-close>✕</button>
+    <h3>反馈 / 纠错</h3>
+    <p>发现内容问题？请描述具体时间点与情况，我们会尽快核实。</p>
+    <label for="bxFContent">反馈内容</label>
+    <textarea id="bxFContent" placeholder="例如：第 03:12 处字幕与画面时间不一致"></textarea>
+    <div style="margin-top:18px;display:flex;gap:10px;justify-content:flex-end;">
+      <button class="bx-btn bx-btn--light" data-close>取消</button>
+      <button class="bx-btn bx-btn--primary" id="bxFeedbackSend">发送反馈</button>
+    </div>
+  </div>
+</div>
+
+<!-- 作者弹窗 -->
+<div class="bx-modal" id="bxAuthorModal">
+  <div class="bx-modal__box">
+    <button class="bx-modal__close" data-close>✕</button>
+    <h3 id="bxAuthorName">创作者主页</h3>
+    <p id="bxAuthorDesc">这里是创作者的主页介绍。</p>
+    <div style="margin-top:18px;display:flex;gap:10px;justify-content:flex-end;">
+      <button class="bx-btn bx-btn--light" data-close>关闭</button>
+      <button class="bx-btn bx-btn--primary" id="bxAuthorFollow">关注该创作者</button>
+    </div>
+  </div>
+</div>
+
+<!-- 评论弹窗 -->
+<div class="bx-modal" id="bxCommentModal">
+  <div class="bx-modal__box">
+    <button class="bx-modal__close" data-close>✕</button>
+    <h3>发表评论</h3>
+    <p>理性表达，共同维护值得信赖的讨论氛围。</p>
+    <label for="bxCContent">评论内容</label>
+    <textarea id="bxCContent" placeholder="写下你看到的细节或想补充的信息"></textarea>
+    <div style="margin-top:18px;display:flex;gap:10px;justify-content:flex-end;">
+      <button class="bx-btn bx-btn--light" data-close>取消</button>
+      <button class="bx-btn bx-btn--primary" id="bxCommentSend">发布</button>
+    </div>
+  </div>
+</div>
+
+<button class="bx-to-top" id="bxTopBtn" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var toastEl = document.getElementById('bxToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById('bxBurger');
+  var nav = document.getElementById('bxNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ nav.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  /* 搜索前端反馈 */
+  var searchInput = document.getElementById('bxSearchInput');
+  var searchBtn = document.getElementById('bxSearchBtn');
+  var searchHint = document.getElementById('bxSearchHint');
+  var searchKeys = ['城市夜行','夜行','教程','剪辑','访谈','数据','便利','雨天','创作者','专题','投票','投稿'];
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      searchHint.style.display = 'block';
+      searchHint.textContent = '请输入关键词，例如“城市夜行”或“剪辑教程”。';
+      return;
+    }
+    var hit = searchKeys.filter(function(k){ return k.indexOf(q) > -1 || q.indexOf(k) > -1; });
+    searchHint.style.display = 'block';
+    if(hit.length){
+      searchHint.textContent = '已找到与「' + q + '」相关的 ' + hit.length + ' 组内容，建议从专题企划与视频精选开始浏览。';
+    } else {
+      searchHint.textContent = '暂未找到与「' + q + '」直接匹配的内容，可尝试更短的关键词，或前往帮助中心提问。';
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-like]');
+    if(likeBtn){
+      e.preventDefault();
+      var numEl = likeBtn.querySelector('b');
+      var liked = likeBtn.classList.toggle('is-liked');
+      if(numEl){
+        var raw = numEl.textContent.replace(/[^\d.]/g,'');
+        var num = parseFloat(raw) || 0;
+        if(raw.indexOf('.') === -1){
+          num = liked ? num + 1 : Math.max(num - 1, 0);
+          numEl.textContent = num;
+        }
+      }
+      if(liked){ likeBtn.firstChild && (likeBtn.childNodes[0].nodeValue = '♥ 已赞 '); toast('已点赞，感谢你的支持'); }
+      else { likeBtn.firstChild && (likeBtn.childNodes[0].nodeValue = '♡ '); toast('已取消点赞'); }
+      return;
+    }
+    var saveBtn = e.target.closest('[data-save]');
+    if(saveBtn){
+      e.preventDefault();
+      var saved = saveBtn.classList.toggle('is-saved');
+      saveBtn.textContent = saved ? '★ 已收藏' : '☆ 收藏';
+      toast(saved ? '已加入收藏，可在个人收藏查看' : '已取消收藏');
+      return;
+    }
+    var commentBtn = e.target.closest('[data-comment]');
+    if(commentBtn){
+      e.preventDefault();
+      openModal('bxCommentModal');
+      return;
+    }
+  });
+
+  /* 弹窗通用 */
+  function openModal(id){
+    var m = document.getElementById(id);
+    if(m){ m.classList.add('is-open'); }
+  }
+  function closeAll(){
+    document.querySelectorAll('.bx-modal').forEach(function(m){ m.classList.remove('is-open'); });
+  }
+  document.querySelectorAll('.bx-modal').forEach(function(m){
+    m.addEventListener('click', function(e){
+      if(e.target === m || e.target.closest('[data-close]')){ m.classList.remove('is-open'); }
+    });
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeAll(); } });
+
+  /* 复制链接 + Toast */
+  function copyLink(){
+    var link = 'https://911baoliao.example/focus';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(function(){ toast('链接已复制到剪贴板'); }).catch(function(){ toast('复制失败，请手动选中文档地址'); });
+    } else {
+      toast('当前环境不支持自动复制，请手动复制');
+    }
+  }
+  document.addEventListener('click', function(e){
+    var copyBtn = e.target.closest('[data-copy]');
+    if(copyBtn){ e.preventDefault(); copyLink(); }
+    var shareBtn = e.target.closest('[data-share]');
+    if(shareBtn){
+      e.preventDefault();
+      var p = shareBtn.getAttribute('data-share');
+      var names = {wechat:'微信', weibo:'微博', qq:'QQ'};
+      toast('已生成' + (names[p] || '') + '分享提示，可复制链接到对应平台');
+    }
+  });
+
+  /* 分享弹窗入口 */
+  document.getElementById('bxOpenShare').addEventListener('click', function(){ openModal('bxShareModal'); });
+  document.getElementById('bxShareFooter').addEventListener('click', function(){ openModal('bxShareModal'); });
+
+  /* 投稿入口 */
+  ['bxSubmitTop','bxSubmitCta','bxSubmitFooter'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){ el.addEventListener('click', function(){ openModal('bxSubmitModal'); }); }
+  });
+  document.getElementById('bxSubmitSend').addEventListener('click', function(){
+    var name = document.getElementById('bxSName').value.trim();
+    var contact = document.getElementById('bxSContact').value.trim();
+    if(!name || !contact){
+      toast('请填写称呼与联系方式后再提交');
+      return;
+    }
+    closeAll();
+    toast('投稿已提交，编辑将在 3 个工作日内回复');
+  });
+
+  /* 反馈弹窗 */
+  document.getElementById('bxFeedbackCta').addEventListener('click', function(){ openModal('bxFeedbackModal'); });
+  document.getElementById('bxFeedbackSend').addEventListener('click', function(){
+    var val = document.getElementById('bxFContent').value.trim();
+    if(!val){ toast('请先填写反馈内容'); return; }
+    closeAll();
+    toast('反馈已发送，感谢你帮助我们改进');
+  });
+
+  /* 投票 */
+  function voteAction(){
+    toast('投票已记录，感谢参与年度真实影像票选');
+  }
+  document.getElementById('bxVoteBtn').addEventListener('click', voteAction);
+  document.getElementById('bxVoteFooter').addEventListener('click', voteAction);
+
+  /* 作者弹窗 */
+  var authorInfo = {
+    '夜行记录组': '三人小组，专注夜间城市影像。习惯用固定机位与长时间等待换取真实瞬间，擅长把零散画面整理成可读的时间线索。代表专题《城市夜行·现场追踪》。',
+    '剪辑师阿杭': '十年后期从业者，做过纪录片也做过新闻短片。课程风格务实，喜欢把抽象节奏拆成可执行的步骤表，代表作品《现场影像的叙事结构》。',
+    '林川现场': '常驻城市清晨的拍手，作品多为环境声短片。擅长在嘈杂里找到安静的段落，代表作品《早高峰路口的十二分钟》。',
+    '陈默现场': '偏爱小空间与重复动作，作品多围绕便利店、公交站与深夜小店展开，代表作品《一间 24 小时便利店的三次交接班》。',
+    '糖粒子': '前媒体编辑，现做知识科普视频。擅长把复杂时间线讲成普通人一听就懂的图表，代表作品《从一条 40 秒视频看懂事件时间轴》。',
+    '器材老周': '器材测评与实操技巧作者，口播干脆、不绕弯子。每期给出可直接照做的清单与预算建议，代表作品《雨天摄影的曝光与收音清单》。'
+  };
+  document.querySelectorAll('[data-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author');
+      document.getElementById('bxAuthorName').textContent = name + ' · 创作者主页';
+      document.getElementById('bxAuthorDesc').textContent = authorInfo[name] || '创作者主页介绍。';
+      openModal('bxAuthorModal');
+    });
+  });
+  document.getElementById('bxAuthorFollow').addEventListener('click', function(){
+    closeAll();
+    toast('已关注该创作者，新作品将优先推荐给你');
+  });
+
+  /* 评论弹窗 */
+  document.getElementById('bxCommentSend').addEventListener('click', function(){
+    var val = document.getElementById('bxCContent').value.trim();
+    if(!val){ toast('请先写下评论内容'); return; }
+    closeAll();
+    toast('评论已发布，感谢你的理性表达');
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('bxTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ topBtn.classList.add('is-show'); }
+    else { topBtn.classList.remove('is-show'); }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+
+</body>
+  </html>
